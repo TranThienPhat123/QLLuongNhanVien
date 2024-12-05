@@ -22,12 +22,10 @@ namespace BTBuoi4
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
-            // Lấy giá trị từ các ô nhập liệu
             MSNV = txtMSNV.Text;
             TenNV = txtTenNV.Text;
             LuongCB = txtLuongCB.Text;
 
-            // Kiểm tra dữ liệu (có thể thêm kiểm tra hợp lệ)
             if (string.IsNullOrWhiteSpace(MSNV) || string.IsNullOrWhiteSpace(TenNV) || string.IsNullOrWhiteSpace(LuongCB))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

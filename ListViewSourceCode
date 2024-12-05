@@ -28,7 +28,6 @@ namespace BTBuoi4
             frm.Text = "Thêm Nhân Viên";
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                // Thêm dữ liệu vào DataGridView
                 dgvNhanVien.Rows.Add(frm.MSNV, frm.TenNV, frm.LuongCB);
             }
         }
@@ -71,7 +70,6 @@ namespace BTBuoi4
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Đặt chế độ tự động fill cột
             dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }

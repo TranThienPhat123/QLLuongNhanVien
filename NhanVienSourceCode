@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace BTBuoi4
+{
+    public partial class frmNhanVien : Form
+    {
+        public string MSNV { get; set; }
+        public string TenNV { get; set; }
+        public string LuongCB { get; set; }
+        public frmNhanVien()
+        {
+            InitializeComponent();
+        }
+
+        private void btnDongY_Click(object sender, EventArgs e)
+        {
+            // Lấy giá trị từ các ô nhập liệu
+            MSNV = txtMSNV.Text;
+            TenNV = txtTenNV.Text;
+            LuongCB = txtLuongCB.Text;
+
+            // Kiểm tra dữ liệu (có thể thêm kiểm tra hợp lệ)
+            if (string.IsNullOrWhiteSpace(MSNV) || string.IsNullOrWhiteSpace(TenNV) || string.IsNullOrWhiteSpace(LuongCB))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void btnBoQua_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+        }
+    }
+}
